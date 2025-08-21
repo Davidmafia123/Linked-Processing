@@ -1,0 +1,44 @@
+---
+---
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="text-2xl font-bold text-primary">Linked Processing</a>
+    <div class="hidden md:flex space-x-6 items-center">
+      <a href="/" class="text-gray-600 hover:text-accent">Home</a>
+      <a href="/about" class="text-gray-600 hover:text-accent">About Us</a>
+      <a href="/services" class="text-gray-600 hover:text-accent">Services</a>
+      <a href="/industries" class="text-gray-600 hover:text-accent">Industries</a>
+      <a href="/why-us" class="text-gray-600 hover:text-accent">Why Choose Us</a>
+      <a href="/testimonials" class="text-gray-600 hover:text-accent">Testimonials</a>
+      <a href="/contact" class="bg-accent text-white px-4 py-2 rounded-md hover:opacity-90 transition-opacity">Contact Us</a>
+    </div>
+    <div class="md:hidden flex items-center">
+      <button id="mobile-menu-button" class="text-primary focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+    <a href="/" class="block py-2 px-4 text-sm hover:bg-secondary">Home</a>
+    <a href="/about" class="block py-2 px-4 text-sm hover:bg-secondary">About Us</a>
+    <a href="/services" class="block py-2 px-4 text-sm hover:bg-secondary">Services</a>
+    <a href="/industries" class="block py-2 px-4 text-sm hover:bg-secondary">Industries</a>
+    <a href="/why-us" class="block py-2 px-4 text-sm hover:bg-secondary">Why Choose Us</a>
+    <a href="/testimonials" class="block py-2 px-4 text-sm hover:bg-secondary">Testimonials</a>
+    <a href="/contact" class="block py-2 px-4 text-sm hover:bg-secondary">Contact Us</a>
+  </div>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>
